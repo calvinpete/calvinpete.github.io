@@ -6,13 +6,18 @@
     <title>Calvin Tinka</title>
     <link rel="stylesheet" type="text/css" href="resume.css" />
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
-    <script src="https://unpkg.com/html2canvas@1.0.0-rc.5/dist/html2canvas.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 
 <body>
+    <div class="site-nav">
+        <a class="pdf-btn" href="index.html">Home</a>
+        <a class="pdf-btn" href="ahabwe-emmanuel.html">Ahabwe Emmanuel CV</a>
+    </div>
     <div class="btn-wrapper">
-        <a class="pdf-btn" href="resume.pdf" target="_blank">download pdf</a>
+        <button class="pdf-btn" type="button" onclick="printResume()">Print Resume</button>
+        <button class="pdf-btn" type="button" onclick="downloadResumePDF()">Download Resume PDF</button>
     </div>
     <div class="resume-container" id="resume">
         <div class="resume-header">
@@ -55,25 +60,69 @@
             </span>
         </div>
         <div class="resume-manifest">
-            I'm a dynamic, detail-oriented Software Engineer with 3+ years experience managing almost all aspects of the software development process. I specialise in building modern software applications using the latest technologies and engineering methods. I am
-            a team player well-versed with Requirement analysis, Object-Oriented design, versioning, agile and test-driven development.
+            I'm an innovative Software Engineer with almost 10 years of experience across the software development lifecycle. I have built mobile, frontend, and backend applications using Node.js, Python (Flask/Django), JavaScript, React, and Angular. I am a
+            collaborative engineer experienced in requirement analysis, object-oriented design, version control, agile delivery, and quality-focused development.
         </div>
         <div class="resume-body">
             <div class="resume-body-main">
                 <div class="resume-body-title"><span class="resume-body-pager"></span>work experience</div>
                 <div class="resume-work-experience">
                     <div class="resume-work-experience-title">
-                        <span class="job-title">Software Engineer</span>
-                        <span class="job-date">08/2020 - present</span>
-                        <span class="job-company">GAFCOM Soluitons (U) Ltd, Kampala, Uganda</span>
+                        <span class="job-title">Software Programmer</span>
+                        <span class="job-date">01/2022 - present</span>
+                        <span class="job-company">MARMOPE (U) Ltd, Kampala, Uganda</span>
                     </div>
                     <div class="resume-work-experience-body">
-                        GAFCOM Solutions is an IT consultancy firm that perfoms IT hardware setups, configuraions plus repairs as well as software setups and development.
+                        MARMOPE Ltd is an IT consultancy firm that performs IT hardware setups, configurations, repairs, and software development.
                         <ul>
                             <li>
-                                Working on a web applicaiton as well as a mobile app called <b>WillGen</b> - A web app that assists a user to create a will seamlessly by answering Yes or No questions. Below are some of the functionalities I worked on;
+                                Working on an Insurance Online Sales Portal for <b>Jubilee Allianz General Insurance Uganda</b> - A web app that assists a user to buy insurance from Jubilee Allianz General Insurance.
+                                <div class="resume-work-experience-stack">
+                                    <span class="stack-label">Tech Stack:</span>
+                                    <div class="tech-stacks-container">
+                                        <span class="tech-stack">Angular</span>
+                                        <span class="tech-stack">Node Js</span>
+                                        <span class="tech-stack">Express Js</span>
+                                        <span class="tech-stack">Parse-server</span>
+                                        <span class="tech-stack">Mongo DB</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                Designed and built a website for <b>Labayao Media</b>.
+                                <div class="resume-work-experience-stack">
+                                    <span class="stack-label">Tech Stack:</span>
+                                    <div class="tech-stacks-container">
+                                        <span class="tech-stack">Angular</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                Worked on the <b>Rabbai Daniel Malinga</b> website and mobile app to add extra functionalities.
+                                <div class="resume-work-experience-stack">
+                                    <span class="stack-label">Tech Stack:</span>
+                                    <div class="tech-stacks-container">
+                                        <span class="tech-stack">Angular</span>
+                                        <span class="tech-stack">flutter</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="resume-work-experience">
+                    <div class="resume-work-experience-title">
+                        <span class="job-title">Software Engineer (Part-time)</span>
+                        <span class="job-date">09/2019 - present</span>
+                        <span class="job-company">GAFCOM Solutions (U) Ltd, Kampala, Uganda</span>
+                    </div>
+                    <div class="resume-work-experience-body">
+                        GAFCOM Solutions is an IT consultancy firm that performs IT hardware setups, configurations, repairs, and software development.
+                        <ul>
+                            <li>
+                                Working on a web application as well as a mobile app called <b>WillGen</b> - A web app that assists a user to create a will seamlessly by answering Yes or No questions. Below are some of the functionalities I worked on;
                                 <ol>
-                                    <li>Constructerd the Software Requirement Specification document after carrying out a requirement anaalysis.</li>
+                                    <li>Constructed the Software Requirement Specification document after carrying out a requirement analysis.</li>
                                     <li>Designed the web application and mobile application.</li>
                                     <li>Consumed REST API endpoints to feed data into the different parts of the app.</li>
                                 </ol>
@@ -89,7 +138,7 @@
                                 </div>
                             </li>
                             <li>
-                                Designed and built a website for <b> Everdandy </b> bar and restuarant.
+                                Designed and built a website for <b>Everdandy</b> bar and restaurant.
                                 <div class="resume-work-experience-stack">
                                     <span class="stack-label">Tech Stack:</span>
                                     <div class="tech-stacks-container">
@@ -98,7 +147,7 @@
                                 </div>
                             </li>
                             <li>
-                                Worked on the <b> Avantiesl </b> website to include information on the Ugandan Office.
+                                Worked on the <b>Avantiesl</b> website to include information on the Ugandan office.
                                 <div class="resume-work-experience-stack">
                                     <span class="stack-label">Tech Stack:</span>
                                     <div class="tech-stacks-container">
@@ -111,25 +160,25 @@
                 </div>
                 <div class="resume-work-experience">
                     <div class="resume-work-experience-title">
-                        <span class="job-title">Product Engineer (Contractor)</span>
-                        <span class="job-date">07/2019 - 07/2019</span>
+                        <span class="job-title">Product Engineer</span>
+                        <span class="job-date">07/2019 - 09/2019</span>
                         <span class="job-company">Tulaa Kenya, Nairobi, Kenya</span>
                     </div>
                     <div class="resume-work-experience-body">
-                        Tulaa provides smallholder farmers with quality agricultural inputs on credit and brokers the sale of their crop at harvest time. As a <b>Product Engineer</b> tasked to ensure completion of the new version of the Customer relationship
-                        management system, these were my responsibilities;
+                        Tulaa provides smallholder farmers with quality agricultural inputs on credit and brokers the sale of their crop at harvest time. After spending 3 months with the frontend team during apprenticeship, I was given the opportunity to continue
+                        as a product engineer and help roll out the new CRM version to production in September 2019.
                         <ul>
                             <li>
-                                Offer <b>mentorship</b> to junior engineers through pair programming sessions.
+                                Offered <b>mentorship</b> to junior engineers through pair programming sessions.
                             </li>
                             <li>
-                                Review <b>Pull Requests</b> raised by Junior Engineers.
+                                Reviewed <b>pull requests</b> raised by junior engineers.
                             </li>
                             <li>
                                 Interface with the <b>Product Owner</b> to understand the business, goals, and visions for Tulaa.
                             </li>
                             <li>
-                                Develop readable, testable, and maintainable<b>code</b> to spec
+                                Developed readable, testable, and maintainable <b>code</b> to spec.
                             </li>
                         </ul>
                     </div>
@@ -146,7 +195,7 @@
                 </div>
                 <div class="resume-work-experience">
                     <div class="resume-work-experience-title">
-                        <span class="job-title">Software Engineer</span>
+                        <span class="job-title">Full Stack Software Engineer (Python/Django, React/Redux)</span>
                         <span class="job-date">12/2018 - 05/2019</span>
                         <span class="job-company">Andela, Kampala, Uganda</span>
                     </div>
@@ -154,12 +203,13 @@
                         Andela invests in Africa’s most talented software engineers to help companies solve the technical talent shortage and build high-performing distributed engineering teams.
                         <ul>
                             <li>
-                                Worked remotely as a <b> Front-End Web Developer</b> to build a new version of the Customer relationship management (CRM) system for a company called <b>Tulaa Kenya</b>. Below are some of the functionalities I worked on;
+                                Worked remotely as a <b>Frontend Web Developer (Angular)</b> during apprenticeship (05/2019 - 07/2019) to build a new version of the Customer relationship management (CRM) system for <b>Tulaa Kenya</b>. Below are some of the
+                                functionalities I worked on;
                                 <ol>
-                                    <li>Consumed the Google Maps API to display the Tulaa's raw material collection points in Kenya.</li>
+                                    <li>Consumed the Google Maps API to display Tulaa's raw material collection points in Kenya.</li>
                                     <li>Consumed REST API endpoints to feed data into the different parts of the CRM system.</li>
                                     <li>Built a docker Image for Bitbucket's internal CI to run and test the operability of the CRM system on other machines.</li>
-                                    <li>Fixed Bugs to ensure an optimized seamless operation of the CRM system.</li>
+                                    <li>Fixed bugs to ensure an optimized seamless operation of the CRM system.</li>
                                 </ol>
                                 <div class="resume-work-experience-stack">
                                     <span class="stack-label">Tech Stack:</span>
@@ -198,7 +248,7 @@
 
                 <div class="resume-work-experience">
                     <div class="resume-work-experience-title">
-                        <span class="job-title">Software Engineer (BootCamp)</span>
+                        <span class="job-title">Full Stack Engineer (Python/Flask, VanillaJS) - Internship</span>
                         <span class="job-date">10/2018 - 12/2018</span>
                         <span class="job-company">Andela Kampala, Uganda</span>
                     </div>
@@ -237,13 +287,13 @@
                         <div class="skill-container">
                             Postgres
                             <div class="progress-wrapper">
-                                <div class="progress-bar progress-length-80"></div>
+                                <div class="progress-bar progress-length-full"></div>
                             </div>
                         </div>
                         <div class="skill-container">
                             MongoDB
                             <div class="progress-wrapper">
-                                <div class="progress-bar progress-length-40"></div>
+                                <div class="progress-bar progress-length-60"></div>
                             </div>
                         </div>
                     </li>
@@ -277,15 +327,27 @@
                             </div>
                         </div>
                         <div class="skill-container">
-                            Angular
+                            Node.js
                             <div class="progress-wrapper">
                                 <div class="progress-bar progress-length-80"></div>
                             </div>
                         </div>
                         <div class="skill-container">
-                            React / Redux
+                            Angular
+                            <div class="progress-wrapper">
+                                <div class="progress-bar progress-length-full"></div>
+                            </div>
+                        </div>
+                        <div class="skill-container">
+                            Flutter
                             <div class="progress-wrapper">
                                 <div class="progress-bar progress-length-40"></div>
+                            </div>
+                        </div>
+                        <div class="skill-container">
+                            React / Redux
+                            <div class="progress-wrapper">
+                                <div class="progress-bar progress-length-90"></div>
                             </div>
                         </div>
                         <div class="skill-container">
@@ -313,6 +375,12 @@
                             </div>
                         </div>
                         <div class="skill-container">
+                            AI
+                            <div class="progress-wrapper">
+                                <div class="progress-bar progress-length-40"></div>
+                            </div>
+                        </div>
+                        <div class="skill-container">
                             Blcokchain
                             <div class="progress-wrapper">
                                 <div class="progress-bar progress-length-20"></div>
@@ -324,7 +392,7 @@
                         <div class="skill-container">
                             Git
                             <div class="progress-wrapper">
-                                <div class="progress-bar progress-length-80"></div>
+                                <div class="progress-bar progress-length-full"></div>
                             </div>
                         </div>
                         <div class="skill-container">
@@ -366,7 +434,7 @@
                         <div class="skill-container">
                             Circle-CI
                             <div class="progress-wrapper">
-                                <div class="progress-bar progress-length-60"></div>
+                                <div class="progress-bar progress-length-full"></div>
                             </div>
                         </div>
                         <div class="skill-container">
@@ -401,14 +469,14 @@
 
                 <div class="resume-body-title"><span class="resume-body-pager"></span>Education</div>
                 <div class="education-wrapper">
-                    <div class="education-level">BSC-ACTUARIAL SCIENCE</div>
-                    <div class="education-institution">MAKERERE UNIVERSITY</div>
+                    <div class="education-level">BACHELOR'S DEGREE - ACTUARIAL SCIENCE</div>
+                    <div class="education-institution">MAKERERE UNIVERSITY (SECOND CLASS UPPER)</div>
                     <div class="education-year">2011 - 2015</div>
                 </div>
                 <div class="education-wrapper">
-                    <div class="education-level">A-LEVEL</div>
-                    <div class="education-institution">St. Joseph's SS Naggalama, Mukono</div>
-                    <div class="education-year">2008 - 2010</div>
+                    <div class="education-level">LEADERSHIP ACTIVITY</div>
+                    <div class="education-institution">Makerere Actuarial Association - External Coordinator</div>
+                    <div class="education-year">09/2013 - 05/2014</div>
                 </div>
 
                 <div class="resume-body-title"><span class="resume-body-pager"></span>Certifications</div>
@@ -418,31 +486,54 @@
                     <div class="education-year">Nov 2021</div>
                 </div>
                 <div class="education-wrapper">
-                    <div class="education-level">Git Course</div>
-                    <div class="education-institution">Codecademy</div>
-                    <div class="education-year">March 2021</div>
+                    <div class="education-level">Certificate in Financial Mathematics (CT1)</div>
+                    <div class="education-institution">Institute and Faculty of Actuaries UK</div>
+                    <div class="education-year">Jun 2014</div>
                 </div>
             </div>
         </div>
     </div>
 
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-app.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyAqY7WWIvl6hFFMdfH2EjjWNLil_eGM1dw",
+            authDomain: "marmope-team.firebaseapp.com",
+            projectId: "marmope-team",
+            storageBucket: "marmope-team.firebasestorage.app",
+            messagingSenderId: "768108990682",
+            appId: "1:768108990682:web:cb5f185d1b7142b8ca55e3"
+        };
+
+        const app = initializeApp(firebaseConfig);
+    </script>
     <script type="text/javascript">
-        function toPDF() {
+        window.jsPDF = window.jspdf.jsPDF
+
+        function downloadResumePDF() {
             const filename = 'resume-calvin-tinka.pdf';
+            const resumeContainer = document.querySelector('#resume');
 
             html2canvas(
-                document.querySelector('#resume'), {
+                resumeContainer, {
                     scale: 2
                 }
             ).then(canvas => {
                 let pdf = new jsPDF('p', 'mm', 'a4');
-                pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 211, 298);
+                pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 211, canvas.height * 211 / canvas.width);
                 pdf.save(filename);
             });
         }
+
+        function printResume() {
+            document.body.classList.add('print-resume-only');
+            window.print();
+        }
+
+        window.addEventListener('afterprint', function() {
+            document.body.classList.remove('print-resume-only');
+        });
     </script>
 </body>
-
-</html>
-
 </html>

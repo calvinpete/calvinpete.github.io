@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ahabwe Emmanuel</title>
+    <link rel="stylesheet" type="text/css" href="resume.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+
+<body>
+    <div class="site-nav">
+        <a class="pdf-btn" href="index.html">Home</a>
+        <a class="pdf-btn" href="resume.html">Calvin Tinka CV</a>
+    </div>
+
+    <div class="btn-wrapper">
+        <button class="pdf-btn" type="button" onclick="printResume()">Print Resume</button>
+        <button class="pdf-btn" type="button" onclick="downloadResumePDF()">Download Resume PDF</button>
+    </div>
+    <div class="resume-container" id="resume">
+        <div class="resume-header">
+            <div class="resume-title">
+                <span class="title-content name">Ahabwe Emmanuel</span>
+                <span class="title-content occupation">Director of Technology | Technical Consultant</span>
+            </div>
+            <span class="resume-contact">
+                <span class="contact-item">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="map-marker-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-map-marker-alt fa-w-12 fa-fw fa-lg mr-2">
+                        <path fill="currentColor" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path>
+                    </svg>
+                    Kampala, Uganda
+                </span>
+                <span class="contact-item">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="briefcase" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-briefcase fa-w-16 fa-fw fa-lg mr-2">
+                        <path fill="currentColor" d="M320 336h192v112c0 35.35-28.65 64-64 64H64c-35.35 0-64-28.65-64-64V336h192v48c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32v-48zm192-80v32H0v-32c0-53.02 42.98-96 96-96h96v-32c0-35.35 28.65-64 64-64s64 28.65 64 64v32h96c53.02 0 96 42.98 96 96zM256 96c-17.64 0-32 14.36-32 32v32h64v-32c0-17.64-14.36-32-32-32z"></path>
+                    </svg>
+                    10+ years industry experience
+                </span>
+                <span class="contact-item">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="globe" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="svg-inline--fa fa-globe fa-w-16 fa-fw fa-lg mr-2">
+                        <path fill="currentColor" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm174.9 248c0 39.9-13.4 76.6-35.9 106l-99.6-57.5c2.2-15.7 3.4-31.9 3.4-48.5s-1.2-32.8-3.4-48.5l99.6-57.5c22.5 29.4 35.9 66.1 35.9 106zM248 56c28.3 0 68.8 43.1 86.9 120H161.1C179.2 99.1 219.7 56 248 56zM69.1 150l99.6 57.5c-2.2 15.7-3.4 31.9-3.4 48.5s1.2 32.8 3.4 48.5L69.1 362C46.6 332.6 33.1 295.9 33.1 256S46.6 179.4 69.1 150zM248 456c-28.3 0-68.8-43.1-86.9-120h173.8C316.8 412.9 276.3 456 248 456z"></path>
+                    </svg>
+                    <a class="clickable" href="https://www.linkedin.com/in/ahabwe-emmanuel-03987b6b" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+                </span>
+                <span class="contact-item">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="code-branch" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-code-branch fa-w-12 fa-fw fa-lg mr-2">
+                        <path fill="currentColor" d="M384 192c0 53-43 96-96 96-25.3 0-48.3-9.8-65.5-25.8L139 313.4c2.9 8.2 5 16.9 5 26.6 0 41.4-33.6 75-75 75S-6 381.4-6 340s33.6-75 75-75c20.5 0 39.1 8.3 52.7 21.7l83.5-50.4c-2.8-8.1-4.4-16.8-4.4-25.9 0-9.1 1.6-17.8 4.4-25.9l-83.5-50.4C108.1 147.7 89.5 156 69 156c-41.4 0-75-33.6-75-75S27.6 6 69 6s75 33.6 75 75c0 9.7-2.1 18.4-5 26.6l83.5 51.2C239.7 142.8 262.7 133 288 133c53 0 96 43 96 96z"></path>
+                    </svg>
+                    <a class="clickable" href="https://github.com/AhabweEmmanuel" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+                </span>
+            </span>
+        </div>
+        <div class="resume-manifest">
+            I combine intellect and spiritual intuition to bring forth results in the work I do.
+            I have delivered national-scale software systems, enterprise platforms, and technology advisory work across public and private organizations.
+        </div>
+        <div class="resume-body">
+            <div class="resume-body-main">
+                <div class="resume-body-title"><span class="resume-body-pager"></span>work experience</div>
+
+                <div class="resume-work-experience">
+                    <div class="resume-work-experience-title">
+                        <span class="job-title">Out-sourced Developer</span>
+                        <span class="job-date">04/2016 - present</span>
+                        <span class="job-company">National Drug Authority, Uganda (Contract)</span>
+                    </div>
+                    <div class="resume-work-experience-body">
+                        Outsourced by National Drug Authority, Uganda to deliver core platforms used across the country.
+                        <ul>
+                            <li>Built the Drug Promotions Database Management System serving nationwide operations.</li>
+                            <li>Built the Procurement and Monitoring System managing contracts from initiation to completion nationwide.</li>
+                        </ul>
+                        <div class="resume-work-experience-stack">
+                            <span class="stack-label">Tech Stack:</span>
+                            <div class="tech-stacks-container">
+                                <span class="tech-stack">Svelte</span>
+                                <span class="tech-stack">Angular</span>
+                                <span class="tech-stack">Vue.js</span>
+                                <span class="tech-stack">Node.js</span>
+                                <span class="tech-stack">Database Development</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-work-experience">
+                    <div class="resume-work-experience-title">
+                        <span class="job-title">Technical Consultant</span>
+                        <span class="job-date">06/2015 - present</span>
+                        <span class="job-company">Marmope Ltd, Kampala, Uganda</span>
+                    </div>
+                    <div class="resume-work-experience-body">
+                        I am currently the director of technology at Marmope, leading software delivery and technology strategy.
+                        <ul>
+                            <li>
+                                Led delivery of an Insurance Online Sales Portal for <b>Jubilee Allianz General Insurance Uganda</b>, enabling customers to purchase insurance products online.
+                                <div class="resume-work-experience-stack">
+                                    <span class="stack-label">Tech Stack:</span>
+                                    <div class="tech-stacks-container">
+                                        <span class="tech-stack">Angular</span>
+                                        <span class="tech-stack">Node.js</span>
+                                        <span class="tech-stack">Express.js</span>
+                                        <span class="tech-stack">Parse Server</span>
+                                        <span class="tech-stack">MongoDB</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                Delivered the website for <b>Labayao Media</b>.
+                                <div class="resume-work-experience-stack">
+                                    <span class="stack-label">Tech Stack:</span>
+                                    <div class="tech-stacks-container">
+                                        <span class="tech-stack">Angular</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                Guided feature enhancement of the <b>Rabbai Daniel Malinga</b> website and mobile app.
+                                <div class="resume-work-experience-stack">
+                                    <span class="stack-label">Tech Stack:</span>
+                                    <div class="tech-stacks-container">
+                                        <span class="tech-stack">Angular</span>
+                                        <span class="tech-stack">Flutter</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="resume-work-experience">
+                    <div class="resume-work-experience-title">
+                        <span class="job-title">Senior Network Engineer (Part-time)</span>
+                        <span class="job-date">2015 - present</span>
+                        <span class="job-company">Duracomps Ltd, Kampala, Uganda</span>
+                    </div>
+                </div>
+
+                <div class="resume-work-experience">
+                    <div class="resume-work-experience-title">
+                        <span class="job-title">Software Developer</span>
+                        <span class="job-date">11/2013 - 10/2014</span>
+                        <span class="job-company">Realtech Systems Limited, Kampala, Uganda</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resume-body-side">
+                <div class="resume-body-title"><span class="resume-body-pager"></span>skills</div>
+                <ul>
+                    <li>
+                        <span class="skill-category">development</span>
+                        <div class="skill-container">Flutter<div class="progress-wrapper"><div class="progress-bar progress-length-full"></div></div></div>
+                        <div class="skill-container">JavaScript<div class="progress-wrapper"><div class="progress-bar progress-length-full"></div></div></div>
+                        <div class="skill-container">Angular<div class="progress-wrapper"><div class="progress-bar progress-length-full"></div></div></div>
+                        <div class="skill-container">Vue.js<div class="progress-wrapper"><div class="progress-bar progress-length-80"></div></div></div>
+                        <div class="skill-container">Svelte<div class="progress-wrapper"><div class="progress-bar progress-length-80"></div></div></div>
+                        <div class="skill-container">Node.js<div class="progress-wrapper"><div class="progress-bar progress-length-full"></div></div></div>
+                        <div class="skill-container">Software Development<div class="progress-wrapper"><div class="progress-bar progress-length-full"></div></div></div>
+                        <div class="skill-container">Database Development<div class="progress-wrapper"><div class="progress-bar progress-length-90"></div></div></div>
+                    </li>
+                    <li>
+                        <span class="skill-category">specialization</span>
+                        <div class="skill-container">Message Oriented Middleware<div class="progress-wrapper"><div class="progress-bar progress-length-80"></div></div></div>
+                        <div class="skill-container">Mobile Applications<div class="progress-wrapper"><div class="progress-bar progress-length-full"></div></div></div>
+                        <div class="skill-container">Web Design<div class="progress-wrapper"><div class="progress-bar progress-length-80"></div></div></div>
+                        <div class="skill-container">Mobile Application Development<div class="progress-wrapper"><div class="progress-bar progress-length-full"></div></div></div>
+                        <div class="skill-container">AI<div class="progress-wrapper"><div class="progress-bar progress-length-60"></div></div></div>
+                        <div class="skill-container">iOS Development<div class="progress-wrapper"><div class="progress-bar progress-length-60"></div></div></div>
+                    </li>
+                </ul>
+
+                <div class="resume-body-title"><span class="resume-body-pager"></span>Education</div>
+                <div class="education-wrapper">
+                    <div class="education-level">Bachelor of Science in Computer Engineering</div>
+                    <div class="education-institution">Mbarara University of Science & Technology</div>
+                    <div class="education-year">2009 - 2013</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-app.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyAqY7WWIvl6hFFMdfH2EjjWNLil_eGM1dw",
+            authDomain: "marmope-team.firebaseapp.com",
+            projectId: "marmope-team",
+            storageBucket: "marmope-team.firebasestorage.app",
+            messagingSenderId: "768108990682",
+            appId: "1:768108990682:web:cb5f185d1b7142b8ca55e3"
+        };
+
+        const app = initializeApp(firebaseConfig);
+    </script>
+    <script type="text/javascript">
+        window.jsPDF = window.jspdf.jsPDF
+
+        function downloadResumePDF() {
+            const filename = 'resume-ahabwe-emmanuel.pdf';
+            const resumeContainer = document.querySelector('#resume');
+
+            html2canvas(
+                resumeContainer, {
+                    scale: 2
+                }
+            ).then(canvas => {
+                let pdf = new jsPDF('p', 'mm', 'a4');
+                pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 211, canvas.height * 211 / canvas.width);
+                pdf.save(filename);
+            });
+        }
+
+        function printResume() {
+            document.body.classList.add('print-resume-only');
+            window.print();
+        }
+
+        window.addEventListener('afterprint', function() {
+            document.body.classList.remove('print-resume-only');
+        });
+    </script>
+</body>
+
+</html>
